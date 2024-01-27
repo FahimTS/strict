@@ -7,6 +7,12 @@ $(document).ready(() => {
     $(window).on('scroll', () => {
         let scrollTop = $(this).scrollTop(); 
 
+        if(scrollTop > 200){
+            $('.navbar').addClass('main_menu_bg');
+        }else{
+            $('.navbar').removeClass('main_menu_bg');
+        }
+
         if(scrollTop > 350){
             $('.back_to_top').fadeIn()
         }else{
